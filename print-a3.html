@@ -20,6 +20,24 @@
             overflow: hidden;
         }
         
+        .header-image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 30px; /* Increased margin to create more space */
+            position: relative;
+            z-index: 0; /* Lower z-index so SVG content appears on top */
+        }
+        
+        .header-image {
+            width: 66.67%; /* 2/3 of original width */
+            height: 160px; /* 20% shorter (200px * 0.8 = 160px) */
+            object-fit: cover;
+            object-position: center 40%; /* Show more of the top portion, less of the bottom */
+        }
+        
         .background-container {
             position: absolute;
             top: 0;
@@ -42,6 +60,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            z-index: 2; /* Higher z-index to ensure SVG content appears on top of the header image */
         }
         
         .svg-container svg {
@@ -70,6 +89,9 @@
     </style>
 </head>
 <body>
+    <div class="header-image-container">
+        <img src="Gemini_Generated_Image_js3vmejs3vmejs3v.png" alt="Header Image" class="header-image">
+    </div>
     <div class="background-container"></div>
     <div class="svg-container">
         <svg width="297mm" height="420mm" viewBox="0 0 1122 1587" xmlns="http://www.w3.org/2000/svg">
@@ -194,7 +216,7 @@
           <!-- Title removed as requested -->
           
           <!-- Journey Path - CORRECTED -->
-          <path d="M 150 250 Q 300 200 450 280 Q 600 350 750 300 Q 850 250 900 350 Q 950 450 800 500 Q 650 550 500 600 Q 350 650 200 750 Q 150 850 300 900 Q 450 950 600 1000 Q 750 1050 850 1150 Q 900 1250 750 1300 Q 650 1280 450 1300 Q 400 1280 350 1250 Q 300 1270 200 1300 Q 150 1350 600 1450" 
+          <path d="M 150 250 Q 300 200 450 280 Q 600 350 750 300 Q 850 250 900 350 Q 950 450 800 500 Q 650 550 500 600 Q 350 650 300 900 Q 450 950 600 1000 Q 750 1050 850 1150 Q 900 1250 750 1300 Q 650 1280 450 1300 Q 400 1280 350 1250 Q 300 1270 200 1300 Q 150 1350 600 1450" 
                 stroke="url(#pathGrad)" 
                 stroke-width="4" 
                 fill="none" 
@@ -322,21 +344,6 @@
             <g>
               <rect x="-60" y="40" width="120" height="40" rx="10" ry="10" fill="white" fill-opacity="0.7"/>
               <text x="0" y="65" font-family="'Indie Flower', cursive" font-size="24" font-weight="700" fill="#333" text-anchor="middle">Hades</text>
-            </g>
-          </g>
-          
-          <!-- Planet Dad -->
-          <g transform="translate(200,750)">
-            <circle r="29" fill="#8B4513" filter="url(#strongGlow)"/>
-            <circle r="24" fill="#D2691E"/>
-            <rect x="-12" y="-15" width="24" height="8" fill="#654321" rx="2"/>
-            <circle cx="-6" cy="-3" r="2" fill="#333"/>
-            <circle cx="6" cy="-3" r="2" fill="#333"/>
-            <rect x="-8" y="5" width="16" height="4" fill="#654321"/>
-            <g>
-              <rect x="-60" y="30" width="120" height="60" rx="10" ry="10" fill="white" fill-opacity="0.7"/>
-              <text x="0" y="55" font-family="'Indie Flower', cursive" font-size="22" font-weight="700" fill="#333" text-anchor="middle">Planet</text>
-              <text x="0" y="80" font-family="'Indie Flower', cursive" font-size="22" font-weight="700" fill="#333" text-anchor="middle">Dad</text>
             </g>
           </g>
           
